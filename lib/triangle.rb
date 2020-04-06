@@ -14,9 +14,9 @@ class Triangle
       raise TriangleError
     end
    
-    if one == two && two == three && one == three
+    if @one == @two && @two == @three && @one == @three
       :equilateral
-    elsif one != two && two != three && one != three
+    elsif @one != @two && @two != @three && one != three
       :scalene 
     else 
       :isosceles
