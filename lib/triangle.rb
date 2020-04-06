@@ -14,8 +14,21 @@ class Triangle
   end 
   
   #returns the type of triangle based on triangle parameters
-  def kind
-    
+def kind()
+  #if any side of triangle is less than or equal to zero, raise error
+  if (@side_1 <= 0) || (@side_2 <= 0) || (@side_3 <= 0)
+    raise TriangleError
+    #if triangle violates triangle inequality, raise error
+  elsif (@side_1+@side_2 <= @side_3) || (@side_1+@side_3 <= @side_2) || (@side_2+@side_3 <= @side_1)
+    raise TriangleError
+  else
+    if (@side_1 == @side_2) && (@side_2 == @side_3)
+      :equilateral
+    elsif (@side_1 == @side_2) || (@side_2 == @side_3) || (@side_1 == @side_3)
+      :isosceles
+    elsif (@side_1 != @side_2) && (@side_2 != @side_3) && (@side_1 != @side_3)
+      :scalene
+    end
   end
   
   class TriangleError < StandardError
