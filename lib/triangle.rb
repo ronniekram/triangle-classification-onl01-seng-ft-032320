@@ -15,7 +15,7 @@ class Triangle
   
   #returns the type of triangle based on triangle parameters
   def kind
-
+    
   end
   
   class TriangleError < StandardError
