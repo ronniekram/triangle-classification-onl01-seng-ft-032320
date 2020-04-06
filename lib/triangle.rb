@@ -7,9 +7,25 @@ class Triangle
     @three = three
   end 
 
-  #returns the type of triangle based on triangle parameters
-  def kind()
-  #if any side of triangle is less than or equal to zero, raise error
+  def kind
+    if valid? 
+      true
+    else 
+      raise TriangleError
+    end
+   
+    if one == two && two == three && one == three
+      :equilateral
+    elsif one != two && two != three && one != three
+      :scalene 
+    else 
+      :isosceles
+    end 
+  end
+
+  def valid?
+    (x.positive? && y.positive? && z.positive?) && (x + y > z && x + z > y && y + z > x) ? true : false 
+  end
     
   end
   
