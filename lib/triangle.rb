@@ -37,5 +37,8 @@ class Triangle
   
   class TriangleError < StandardError
     # triangle error code
+    def message
+      "The triangle side lengths you entered are not valid."
+    end 
   end
 end
