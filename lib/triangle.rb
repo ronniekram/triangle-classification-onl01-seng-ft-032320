@@ -26,8 +26,6 @@ class Triangle
   def valid?
     (x.positive? && y.positive? && z.positive?) && (x + y > z && x + z > y && y + z > x) ? true : false 
   end
-    
-end
   
   class TriangleError < StandardError
     # triangle error code
