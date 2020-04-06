@@ -9,6 +9,10 @@ class Triangle
     @@sides << self
   end 
   
+  def self.all
+    @@all
+  end 
+  
   #returns the type of triangle based on triangle parameters
   def kind
   end
