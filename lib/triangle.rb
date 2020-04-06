@@ -15,13 +15,7 @@ class Triangle
   
   #returns the type of triangle based on triangle parameters
   def kind
-    if (one == two == three) 
-      :equilateral
-    elsif (one == two || two == three || one == three) && !(one == two == three)
-      :isosceles
-    elsif (one != two != three)
-      :scalene
-    end
+
   end
   
   class TriangleError < StandardError
